@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC15899926BC05BE0013308D /* mainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15899826BC05BE0013308D /* mainUI.swift */; };
 		FCDEA86B26BA5AC30051D72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86A26BA5AC30051D72B /* AppDelegate.swift */; };
 		FCDEA86D26BA5AC30051D72B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */; };
-		FCDEA86F26BA5AC30051D72B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86E26BA5AC30051D72B /* ContentView.swift */; };
+		FCDEA86F26BA5AC30051D72B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86E26BA5AC30051D72B /* SplashView.swift */; };
 		FCDEA87226BA5AC30051D72B /* styleweather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA87026BA5AC30051D72B /* styleweather.xcdatamodeld */; };
 		FCDEA87426BA5AC30051D72B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDEA87326BA5AC30051D72B /* Assets.xcassets */; };
 		FCDEA87726BA5AC30051D72B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDEA87626BA5AC30051D72B /* Preview Assets.xcassets */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC15899826BC05BE0013308D /* mainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainUI.swift; sourceTree = "<group>"; };
 		FCDEA86726BA5AC30051D72B /* styleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = styleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDEA86A26BA5AC30051D72B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCDEA86E26BA5AC30051D72B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FCDEA86E26BA5AC30051D72B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FCDEA87126BA5AC30051D72B /* styleweather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = styleweather.xcdatamodel; sourceTree = "<group>"; };
 		FCDEA87326BA5AC30051D72B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCDEA87626BA5AC30051D72B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -103,7 +105,8 @@
 			children = (
 				FCDEA86A26BA5AC30051D72B /* AppDelegate.swift */,
 				FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */,
-				FCDEA86E26BA5AC30051D72B /* ContentView.swift */,
+				FCDEA86E26BA5AC30051D72B /* SplashView.swift */,
+				FC15899826BC05BE0013308D /* mainUI.swift */,
 				FCDEA87326BA5AC30051D72B /* Assets.xcassets */,
 				FCDEA87826BA5AC30051D72B /* LaunchScreen.storyboard */,
 				FCDEA87B26BA5AC30051D72B /* Info.plist */,
@@ -271,8 +274,9 @@
 			files = (
 				FCDEA86B26BA5AC30051D72B /* AppDelegate.swift in Sources */,
 				FCDEA86D26BA5AC30051D72B /* SceneDelegate.swift in Sources */,
+				FC15899926BC05BE0013308D /* mainUI.swift in Sources */,
 				FCDEA87226BA5AC30051D72B /* styleweather.xcdatamodeld in Sources */,
-				FCDEA86F26BA5AC30051D72B /* ContentView.swift in Sources */,
+				FCDEA86F26BA5AC30051D72B /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
