@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC09897F26BEF3EA00C4EB95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09897E26BEF3EA00C4EB95 /* ViewController.swift */; };
 		FC15899926BC05BE0013308D /* mainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15899826BC05BE0013308D /* mainUI.swift */; };
+		FCC6F91826C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
+		FCC6F91926C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
+		FCC6F91A26C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
+		FCC6F91C26C04904005404A9 /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */; };
+		FCC6F91D26C04905005404A9 /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */; };
+		FCC6F91E26C04905005404A9 /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */; };
 		FCDEA86B26BA5AC30051D72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86A26BA5AC30051D72B /* AppDelegate.swift */; };
 		FCDEA86D26BA5AC30051D72B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */; };
 		FCDEA86F26BA5AC30051D72B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEA86E26BA5AC30051D72B /* SplashView.swift */; };
@@ -37,7 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC09897E26BEF3EA00C4EB95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC15899826BC05BE0013308D /* mainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainUI.swift; sourceTree = "<group>"; };
+		FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 		FCDEA86726BA5AC30051D72B /* styleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = styleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDEA86A26BA5AC30051D72B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,11 +117,14 @@
 				FCDEA86C26BA5AC30051D72B /* SceneDelegate.swift */,
 				FCDEA86E26BA5AC30051D72B /* SplashView.swift */,
 				FC15899826BC05BE0013308D /* mainUI.swift */,
+				FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */,
+				FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */,
 				FCDEA87326BA5AC30051D72B /* Assets.xcassets */,
 				FCDEA87826BA5AC30051D72B /* LaunchScreen.storyboard */,
 				FCDEA87B26BA5AC30051D72B /* Info.plist */,
 				FCDEA87026BA5AC30051D72B /* styleweather.xcdatamodeld */,
 				FCDEA87526BA5AC30051D72B /* Preview Content */,
+				FC09897E26BEF3EA00C4EB95 /* ViewController.swift */,
 			);
 			path = styleweather;
 			sourceTree = "<group>";
@@ -246,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDEA87A26BA5AC30051D72B /* LaunchScreen.storyboard in Resources */,
+				FCC6F91A26C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */,
+				FCC6F91C26C04904005404A9 /* Cafe24SsurroundAir.ttf in Resources */,
 				FCDEA87726BA5AC30051D72B /* Preview Assets.xcassets in Resources */,
 				FCDEA87426BA5AC30051D72B /* Assets.xcassets in Resources */,
 			);
@@ -255,6 +270,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC6F91D26C04905005404A9 /* Cafe24SsurroundAir.ttf in Resources */,
+				FCC6F91926C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +279,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC6F91E26C04905005404A9 /* Cafe24SsurroundAir.ttf in Resources */,
+				FCC6F91826C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC09897F26BEF3EA00C4EB95 /* ViewController.swift in Sources */,
 				FCDEA86B26BA5AC30051D72B /* AppDelegate.swift in Sources */,
 				FCDEA86D26BA5AC30051D72B /* SceneDelegate.swift in Sources */,
 				FC15899926BC05BE0013308D /* mainUI.swift in Sources */,
