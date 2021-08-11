@@ -6,6 +6,10 @@
 	<array>
 		<string>Montserrat-ExtraLight.ttf</string>
 		<string>Cafe24SsurroundAir.ttf</string>
+		<string>Cafe24Ohsquareair.ttf</string>
+		<string>BMHANNAAir_otf.otf</string>
+		<string>Cafe24Ssukssuk.ttf</string>
+		<string>나눔손글씨 중학생.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
