@@ -10,6 +10,7 @@
 		<string>BMHANNAAir_otf.otf</string>
 		<string>Cafe24Ssukssuk.ttf</string>
 		<string>나눔손글씨 중학생.ttf</string>
+		<string>NanumSquareRoundR.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
@@ -78,6 +79,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>사용자의 위치정보를 확인합니다.</string>
+	<string>사용 중에만 사용자의 위치정보를 이용합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>항상 위치정보를 이용합니다.</string>
 </dict>
 </plist>

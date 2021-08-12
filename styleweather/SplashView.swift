@@ -14,47 +14,59 @@ import CoreLocation
 var curtemp = 0.0
 var icon = ""
 var des = ""
+var timezone = ""
+var dts = ""
+var t1 = ""
+var t2 = ""
+var t3 = ""
+var t4 = ""
+var t5 = ""
+var t6 = ""
 
-struct WeatherData : Decodable {
-    let coord : Coordinate
-    let cod, visibility, id : Int
-    let name : String
-    let base : String
+var i1 = ""
+var i2 = ""
+var i3 = ""
+var i4 = ""
+var i5 = ""
+var i6 = ""
+
+var d1 = ""
+var d2 = ""
+var d3 = ""
+var d4 = ""
+var d5 = ""
+var d6 = ""
+
+var longitude = ""
+var latitude = ""
+struct WeatherData: Decodable {
+    let timezone: String
+    let current : Current
+    let hourly : [Hourly]
+    
+}
+
+struct Current : Decodable {
+    let dt : Int
+    let humidity: Int
+    let temp : Double
     let weather : [Weather]
-    let sys : Sys
-    let main : Main
-    let wind : Wind
-    let dt : Date
 }
 
-struct Coordinate : Decodable {
-    let lat, lon : Double
+struct Hourly : Decodable {
+    let dt : Int
+    let humidity: Int
+    let temp : Double
+    let weather : [Weather]
 }
-
-struct Weather : Decodable {
-    let id : Int
-    let icon : String
-    let main : MainEnum
+struct Weather: Decodable {
+    let main: String
     let description: String
+    let icon: String
 }
-
-struct Sys : Decodable {
-    let type, id : Int
-    let sunrise, sunset : Date
-    let country : String
+struct Temp : Decodable {
+    let day : Double
 }
-
-struct Main : Decodable {
-    let temp, tempMin, tempMax : Double
-    let pressure, humidity : Int
-}
-
-struct Wind : Decodable {
-    let speed : Double
-    let deg : Double?
-    let gust : Double?
-}
-
 enum MainEnum: String, Decodable {
     case clear = "Clear"
     case clouds = "Clouds"
@@ -72,17 +84,38 @@ var bottes = [
     Bott(title: "반팔티",  bottName: "t2"),
     Bott(title: "치마", bottName: "b1"),
 ]
+
+var weathers = [
+    Weatherr(title: "오전 9시", weatherName: "10d", weathertemp: "26°"),
+    Weatherr(title: "오후 12시",  weatherName: "10n", weathertemp: "26°"),
+    Weatherr(title: "오후 3시", weatherName: "04n", weathertemp: "26°"),
+    Weatherr(title: "오후 6시", weatherName: "04n", weathertemp: "26°"),
+    Weatherr(title: "오후 9시", weatherName: "04n", weathertemp: "26°"),
+    Weatherr(title: "오전 12시", weatherName: "04n", weathertemp: "26°"),
+]
+
 let queue = DispatchQueue.main
 struct SplashView: View {
-    
+    @StateObject var locationManager = LocationManager()
+        
+        var userLatitude: String {
+            latitude = "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+            return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+        }
+        
+        var userLongitude: String {
+            longitude = "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+            return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+        }
     @State var isActive:Bool = false
     var body: some View {
         VStack {
             Text("")
                 .onAppear(){
-                        loadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        loadData(lat: "\(userLatitude)",long: "\(userLongitude)")
                         loadCloth()
-                        
+                    }
                 }
             
 
@@ -95,7 +128,7 @@ struct SplashView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                 withAnimation {
                     self.isActive = true
                 }
@@ -106,9 +139,9 @@ struct SplashView: View {
 }
 
 
-func loadData() {
-    var count = 0
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=fa6cc892ae147813637c852e0d803bd5") else {
+func loadData(lat: String, long: String) {
+    print("위도 경도", lat, long)
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(long)&exclude=minutely,alerts&appid=fa6cc892ae147813637c852e0d803bd5") else {
         fatalError("Invalid URL")
     }
     
@@ -122,29 +155,86 @@ func loadData() {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             decoder.dateDecodingStrategy = .secondsSince1970
             let weatherData = try decoder.decode(WeatherData.self, from: data)
-            print("Coordinates: ", weatherData.coord)
-            print("Longitude: ", weatherData.coord.lon)
-            print("Latitude: ", weatherData.coord.lat)
-            print("Weather: ", weatherData.weather)
-            print("Temperature: ", weatherData.main.temp - 273.15)
-            print("Temperature_Max: ", weatherData.main.tempMax - 273.15)
-            print("Temperature_Min: ", weatherData.main.tempMin - 273.15)
-            weatherData.weather.forEach {
-                print("icon: ", $0.icon)
+            print("timezone: ", weatherData.timezone)
+            timezone = weatherData.timezone
+            print("temp: ",weatherData.current.temp - 273.15)
+            curtemp = weatherData.current.temp - 273.15
+            var i = 0
+            weatherData.current.weather.forEach {
+                print("current icon: ", $0.icon)
                 icon = $0.icon
-                print("description: ", $0.description)
+                print("current des: ",$0.description)
                 des = $0.description
             }
-            curtemp = weatherData.main.temp - 273.15
-            count += 1
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "d일 HH시"
+            weatherData.hourly.forEach {
+                print("dt: ",$0.dt)
+                let date = NSDate(timeIntervalSince1970: Double($0.dt))
+                print(date)
+                
+                let formatter = DateFormatter()
+                // initially set the format based on your datepicker date / server String
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+                let myString = formatter.string(from: date as Date) // string purpose I add here // convert your string to date
+                let yourDate = formatter.date(from: myString)
+                formatter.dateFormat = "a h시"                      //then again set the date format whhich type of output you need
+                formatter.locale = Locale(identifier:"ko_KR")
+                formatter.timeZone = TimeZone(abbreviation: "KST")
+                let myStringafd = formatter.string(from: yourDate!)   // again convert your date to string
+
+                print(myStringafd)
+                
+                print("temp",i,": ", $0.temp-273.15)
+                if i == 0{
+                    t1 = String(Int($0.temp - 273.15))
+                    i1 = $0.weather[0].icon
+                    d1 = myStringafd
+                }
+                else if i == 3{
+                    t2 = String(Int($0.temp - 273.15))
+                    i2 = $0.weather[0].icon
+                    d2 = myStringafd
+                }
+                else if i == 6{
+                    t3 = String(Int($0.temp - 273.15))
+                    i3 = $0.weather[0].icon
+                    d3 = myStringafd
+                }
+                else if i == 9{
+                    t4 = String(Int($0.temp - 273.15))
+                    i4 = $0.weather[0].icon
+                    d4 = myStringafd
+                }
+                else if i == 12{
+                    t5 = String(Int($0.temp - 273.15))
+                    i5 = $0.weather[0].icon
+                    d5 = myStringafd
+                }
+                else if i == 15{
+                    t6 = String(Int($0.temp - 273.15))
+                    i6 = $0.weather[0].icon
+                    d6 = myStringafd
+                }
+                print(i,": ", $0.weather[0].icon)
+                print(i,": ",$0.weather[0].description)
+                i += 1
+                weathers = [
+                    Weatherr(title: d1, weatherName: i1, weathertemp: t1+"°"),
+                    Weatherr(title: d2,  weatherName: i2, weathertemp: t2+"°"),
+                    Weatherr(title: d3, weatherName: i3, weathertemp: t3+"°"),
+                    Weatherr(title: d4, weatherName: i4, weathertemp: t4+"°"),
+                    Weatherr(title: d5, weatherName: i5, weathertemp: t5+"°"),
+                    Weatherr(title: d6, weatherName: i6, weathertemp: t6+"°"),
+                ]
+            }
+            
         } catch {
             print("Error serializing Json: ", error)
         }
-        count += 1
     }.resume()
     
-    
-
 }
 
 func loadCloth(){
@@ -152,7 +242,6 @@ func loadCloth(){
         print(curtemp)
         
         
-            curtemp = 31
         if Int(curtemp) >= 28{
             clothes = [
                 Cloth(title: "반팔티", clothName: "28t_반팔티"),

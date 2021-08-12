@@ -1,28 +1,28 @@
 import Foundation
 import CoreLocation
 import Combine
-class LocationManager: NSObject, ObservableObject {
+
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+
+    private let locationManager = CLLocationManager()
+    @Published var locationStatus: CLAuthorizationStatus?
+    @Published var lastLocation: CLLocation?
+
     override init() {
         super.init()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
-    @Published var locationStatus: CLAuthorizationStatus? {
-        willSet {
-            objectWillChange.send()
-        }
-    }
-    @Published var lastLocation: CLLocation? {
-        willSet {
-            objectWillChange.send()
-        }
-    }
+
+   
+    
     var statusString: String {
         guard let status = locationStatus else {
             return "unknown"
         }
+        
         switch status {
         case .notDetermined: return "notDetermined"
         case .authorizedWhenInUse: return "authorizedWhenInUse"
@@ -32,18 +32,15 @@ class LocationManager: NSObject, ObservableObject {
         default: return "unknown"
         }
     }
-    let objectWillChange = PassthroughSubject<Void, Never>()
-    private let locationManager = CLLocationManager()
-}
-extension LocationManager: CLLocationManagerDelegate {
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        self.locationStatus = status
+        locationStatus = status
         print(#function, statusString)
     }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.lastLocation = location
+        lastLocation = location
         print(#function, location)
     }
 }
- 
