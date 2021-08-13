@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC09897F26BEF3EA00C4EB95 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09897E26BEF3EA00C4EB95 /* LocationManager.swift */; };
 		FC15899926BC05BE0013308D /* mainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15899826BC05BE0013308D /* mainUI.swift */; };
+		FC16472626C695D600F02302 /* Swinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16472526C695D600F02302 /* Swinfo.swift */; };
 		FC2B4C3326C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC2B4C3226C577AB00C601D2 /* NanumSquareRoundR.ttf */; };
 		FC2B4C3426C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC2B4C3226C577AB00C601D2 /* NanumSquareRoundR.ttf */; };
 		FC2B4C3526C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC2B4C3226C577AB00C601D2 /* NanumSquareRoundR.ttf */; };
@@ -24,6 +25,11 @@
 		FCA816CB26C10BFF00BA7B4B /* 나눔손글씨 중학생.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCA816CA26C10BFB00BA7B4B /* 나눔손글씨 중학생.ttf */; };
 		FCA816CC26C10BFF00BA7B4B /* 나눔손글씨 중학생.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCA816CA26C10BFB00BA7B4B /* 나눔손글씨 중학생.ttf */; };
 		FCA816CD26C10C0000BA7B4B /* 나눔손글씨 중학생.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCA816CA26C10BFB00BA7B4B /* 나눔손글씨 중학생.ttf */; };
+		FCB30E6A26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB30E6926C6AAD800E79D9B /* NanumSquareRoundL.ttf */; };
+		FCB30E6B26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB30E6926C6AAD800E79D9B /* NanumSquareRoundL.ttf */; };
+		FCB30E6C26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB30E6926C6AAD800E79D9B /* NanumSquareRoundL.ttf */; };
+		FCB30E6E26C6C9E700E79D9B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB30E6D26C6C9E700E79D9B /* Board.swift */; };
+		FCB30E7226C6CAFB00E79D9B /* Mypage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB30E7126C6CAFB00E79D9B /* Mypage.swift */; };
 		FCC6F91826C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
 		FCC6F91926C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
 		FCC6F91A26C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */; };
@@ -61,11 +67,15 @@
 /* Begin PBXFileReference section */
 		FC09897E26BEF3EA00C4EB95 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FC15899826BC05BE0013308D /* mainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainUI.swift; sourceTree = "<group>"; };
+		FC16472526C695D600F02302 /* Swinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinfo.swift; sourceTree = "<group>"; };
 		FC2B4C3226C577AB00C601D2 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		FCA816BE26C105C600BA7B4B /* Cafe24Ohsquareair.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ohsquareair.ttf; sourceTree = "<group>"; };
 		FCA816C226C1084500BA7B4B /* BMHANNAAir_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAAir_otf.otf; sourceTree = "<group>"; };
 		FCA816C626C10B0000BA7B4B /* Cafe24Ssukssuk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssukssuk.ttf; sourceTree = "<group>"; };
 		FCA816CA26C10BFB00BA7B4B /* 나눔손글씨 중학생.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 중학생.ttf"; sourceTree = "<group>"; };
+		FCB30E6926C6AAD800E79D9B /* NanumSquareRoundL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRoundL.ttf; sourceTree = "<group>"; };
+		FCB30E6D26C6C9E700E79D9B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		FCB30E7126C6CAFB00E79D9B /* Mypage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mypage.swift; sourceTree = "<group>"; };
 		FCC6F91726C04616005404A9 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		FCC6F91B26C048FE005404A9 /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 		FCDEA86726BA5AC30051D72B /* styleweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = styleweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +153,7 @@
 				FCA816C226C1084500BA7B4B /* BMHANNAAir_otf.otf */,
 				FC2B4C3226C577AB00C601D2 /* NanumSquareRoundR.ttf */,
 				FCA816C626C10B0000BA7B4B /* Cafe24Ssukssuk.ttf */,
+				FCB30E6926C6AAD800E79D9B /* NanumSquareRoundL.ttf */,
 				FCA816CA26C10BFB00BA7B4B /* 나눔손글씨 중학생.ttf */,
 				FCDEA87326BA5AC30051D72B /* Assets.xcassets */,
 				FCDEA87826BA5AC30051D72B /* LaunchScreen.storyboard */,
@@ -157,6 +168,9 @@
 		FCDEA87526BA5AC30051D72B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				FC16472526C695D600F02302 /* Swinfo.swift */,
+				FCB30E6D26C6C9E700E79D9B /* Board.swift */,
+				FCB30E7126C6CAFB00E79D9B /* Mypage.swift */,
 				FCDEA87626BA5AC30051D72B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -288,6 +302,7 @@
 				FCA816BF26C105EA00BA7B4B /* Cafe24Ohsquareair.ttf in Resources */,
 				FCC6F91C26C04904005404A9 /* Cafe24SsurroundAir.ttf in Resources */,
 				FCDEA87726BA5AC30051D72B /* Preview Assets.xcassets in Resources */,
+				FCB30E6A26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */,
 				FCA816CB26C10BFF00BA7B4B /* 나눔손글씨 중학생.ttf in Resources */,
 				FCDEA87426BA5AC30051D72B /* Assets.xcassets in Resources */,
 				FC2B4C3326C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */,
@@ -305,6 +320,7 @@
 				FCC6F91926C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */,
 				FC2B4C3426C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */,
 				FCA816C426C1084500BA7B4B /* BMHANNAAir_otf.otf in Resources */,
+				FCB30E6B26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */,
 				FCA816C026C105EB00BA7B4B /* Cafe24Ohsquareair.ttf in Resources */,
 				FCA816CC26C10BFF00BA7B4B /* 나눔손글씨 중학생.ttf in Resources */,
 			);
@@ -319,6 +335,7 @@
 				FCC6F91826C0465D005404A9 /* Montserrat-ExtraLight.ttf in Resources */,
 				FC2B4C3526C577B100C601D2 /* NanumSquareRoundR.ttf in Resources */,
 				FCA816C526C1084500BA7B4B /* BMHANNAAir_otf.otf in Resources */,
+				FCB30E6C26C6AAD800E79D9B /* NanumSquareRoundL.ttf in Resources */,
 				FCA816C126C105EB00BA7B4B /* Cafe24Ohsquareair.ttf in Resources */,
 				FCA816CD26C10C0000BA7B4B /* 나눔손글씨 중학생.ttf in Resources */,
 			);
@@ -333,9 +350,12 @@
 			files = (
 				FC09897F26BEF3EA00C4EB95 /* LocationManager.swift in Sources */,
 				FCDEA86B26BA5AC30051D72B /* AppDelegate.swift in Sources */,
+				FC16472626C695D600F02302 /* Swinfo.swift in Sources */,
 				FCDEA86D26BA5AC30051D72B /* SceneDelegate.swift in Sources */,
+				FCB30E7226C6CAFB00E79D9B /* Mypage.swift in Sources */,
 				FC15899926BC05BE0013308D /* mainUI.swift in Sources */,
 				FCDEA87226BA5AC30051D72B /* styleweather.xcdatamodeld in Sources */,
+				FCB30E6E26C6C9E700E79D9B /* Board.swift in Sources */,
 				FCDEA86F26BA5AC30051D72B /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

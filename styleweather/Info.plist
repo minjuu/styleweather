@@ -11,6 +11,7 @@
 		<string>Cafe24Ssukssuk.ttf</string>
 		<string>나눔손글씨 중학생.ttf</string>
 		<string>NanumSquareRoundR.ttf</string>
+		<string>NanumSquareRoundL.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

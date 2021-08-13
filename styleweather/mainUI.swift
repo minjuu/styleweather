@@ -15,26 +15,7 @@ struct mainUI: View {
     var clothData = clothes
     var bottData = bottes
     var weatherData = weathers
-    @State private var selection = 2
     var body: some View {
-//        TabView(selection: $selection){
-//            mainUI().tabItem {
-//                        Image(systemName: "1.circle")
-//                        Text("one")
-//                    }.tag(1)
-//            
-//                Text("Tab Content 2")
-//                    .tabItem {
-//                        Image(systemName: "2.circle")
-//                        Text("two")
-//                    }.tag(2)
-//                
-//                Text("Tab Content 3")
-//                    .tabItem {
-//                        Image(systemName: "1.circle")
-//                        Text("one")
-//                    }.tag(3)
-//        }
         ScrollView
         {
             HStack(alignment: .center, spacing: nil)
@@ -47,28 +28,46 @@ struct mainUI: View {
                     .font(.custom("NanumSquareRoundR", size: 19))
                     .frame(width:120,alignment: .center)
             }
+            VStack{
             HStack(alignment: .center)
             {
                 VStack{
-                Text(strtemp+"°C  ")
+                Text(strtemp+"°C")
                     .font(.custom("Montserrat-ExtraLight", size: 50))
-                    .frame(width:120,alignment: .leading)
-                    .padding([.leading],70)
-                
-                    Text(des)
-                        .font(.custom("Montserrat-ExtraLight", size: 20))
+                    .frame(width:120,alignment: .trailing)
+                    .padding([.leading],50)
+                    .padding(.bottom, 3)
+                    Text(tempdes)
+                        .font(.custom("NanumSquareRoundL", size: 17))
                         .frame(width:160,alignment: .trailing)
                 }
-                Image(icon.trimmingCharacters(in: .whitespaces))
+                .padding(.trailing, 15)
+                
+                Image(icon)
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .trailing)
                     .padding([.leading],20)
-                Text("   ")
-                    .font(.custom("Montserrat-ExtraLight", size: 50))
-                    .frame(height:250,alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
-            .frame(width: 400, height: 180, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        
+            .frame(width: 400, height: 160, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .padding(.bottom,0)
+            Text(des)
+                .font(.custom("NanumSquareRoundr", size: 17))
+                .multilineTextAlignment(.center)
+                .lineSpacing(7.0)
+                .frame(width:320, height:90, alignment: .top)
+                .padding(.top,10)
+            }
+            .frame(width: 390)
+            .background(
+                RoundedRectangle(cornerRadius: 25, style: .continuous).fill(Color(#colorLiteral(red: 0.8978314996, green: 0.9532615822, blue: 0.9943728147, alpha: 1)))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                    .strokeBorder(Color(#colorLiteral(red: 0.8978314996, green: 0.9532615822, blue: 0.9943728147, alpha: 1)), lineWidth: 2)
+            )
+            
+            
+            .padding(.bottom, 25)
             VStack(alignment:.leading, spacing:20 )
             {
                 Text("#추천 OOTD 상의")
@@ -215,7 +214,7 @@ struct WeatherView: View {
                 Image(weather.weatherName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width:57, height:50)
+                    .frame(width:59, height:50)
                 Text(weather.weathertemp)
                     .font(.custom("NanumSquareRoundR", size: 17))
                     Spacer()
@@ -224,12 +223,13 @@ struct WeatherView: View {
         .padding(10)
         .frame(width:110, height: 130)
         .background(
-            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.9999018312, green: 1, blue: 0.9998798966, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8978314996, green: 0.9532615822, blue: 0.9943728147, alpha: 1)), Color(#colorLiteral(red: 0.8978314996, green: 0.9532615822, blue: 0.9943728147, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
         )
         .foregroundColor(.black)
         .cornerRadius(15.0)
+        .padding(.leading, 50)
+        .padding(.trailing, 50)
     }
     
 }
-
 

@@ -12,9 +12,9 @@ import CoreLocation
 
 
 var curtemp = 0.0
-var icon = ""
-var des = ""
-var timezone = ""
+var icon = "01n"
+var des = "맑고 화창한 하늘이에요. \n오늘은 산책하기 좋은 날씨입니다."
+var timezone = "Asia/Seoul"
 var dts = ""
 var t1 = ""
 var t2 = ""
@@ -37,13 +37,17 @@ var d4 = ""
 var d5 = ""
 var d6 = ""
 
+var tempdes = "최고: "+String(Int(maxtemp))+"°  최저: "+String(Int(mintemp))+"°"
+var maxtemp = 0.0
+var mintemp = 0.0
+
 var longitude = ""
 var latitude = ""
 struct WeatherData: Decodable {
     let timezone: String
     let current : Current
     let hourly : [Hourly]
-    
+    let daily : [Daily]
 }
 
 struct Current : Decodable {
@@ -59,6 +63,11 @@ struct Hourly : Decodable {
     let temp : Double
     let weather : [Weather]
 }
+struct Daily : Decodable {
+    let dt : Int
+    let humidity: Int
+    let temp : Temp
+}
 struct Weather: Decodable {
     let main: String
     let description: String
@@ -66,6 +75,9 @@ struct Weather: Decodable {
 }
 struct Temp : Decodable {
     let day : Double
+    let min : Double
+    let max : Double
+
 }
 enum MainEnum: String, Decodable {
     case clear = "Clear"
@@ -120,7 +132,7 @@ struct SplashView: View {
             
 
             if self.isActive {
-                mainUI()
+                Swinfo()
             } else {
                 Image("logo")
                     .resizable()
@@ -155,11 +167,39 @@ func loadData(lat: String, long: String) {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             decoder.dateDecodingStrategy = .secondsSince1970
             let weatherData = try decoder.decode(WeatherData.self, from: data)
+            
             print("timezone: ", weatherData.timezone)
             timezone = weatherData.timezone
             print("temp: ",weatherData.current.temp - 273.15)
             curtemp = weatherData.current.temp - 273.15
             var i = 0
+            var j = 0
+            weatherData.daily.forEach{
+                //print("dt: ",$0.dt)
+                let date = NSDate(timeIntervalSince1970: Double($0.dt))
+                //print(date)
+                
+                let formatter = DateFormatter()
+                // initially set the format based on your datepicker date / server String
+                formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+                let myString = formatter.string(from: date as Date) // string purpose I add here // convert your string to date
+                let yourDate = formatter.date(from: myString)
+                formatter.dateFormat = "d일"                      //then again set the date format whhich type of output you need
+                formatter.locale = Locale(identifier:"ko_KR")
+                formatter.timeZone = TimeZone(abbreviation: "KST")
+                let myStringafd = formatter.string(from: yourDate!)   // again convert your date to string
+
+                print(myStringafd)
+                print("최고: ",$0.temp.max - 273.15)
+                print("최저: ",$0.temp.min - 273.15)
+                if j == 0{
+                    maxtemp = $0.temp.max - 273.15
+                    mintemp = $0.temp.min - 273.15
+                }
+                j += 1
+            }
+            
             weatherData.current.weather.forEach {
                 print("current icon: ", $0.icon)
                 icon = $0.icon
@@ -168,6 +208,7 @@ func loadData(lat: String, long: String) {
             }
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "d일 HH시"
+            
             weatherData.hourly.forEach {
                 print("dt: ",$0.dt)
                 let date = NSDate(timeIntervalSince1970: Double($0.dt))
@@ -229,7 +270,35 @@ func loadData(lat: String, long: String) {
                     Weatherr(title: d6, weatherName: i6, weathertemp: t6+"°"),
                 ]
             }
+            tempdes = "최고: "+String(Int(maxtemp))+"°  최저: "+String(Int(mintemp))+"°"
             
+            if icon == "01d" || icon == "01n"{
+                des = "맑고 화창한 하늘이에요. \n오늘은 산책하기 좋은 날씨입니다 🌱"
+            }
+            else if icon == "02d" || icon == "01n"{
+                des = "구름이 조금 있어요. \n하지만 햇살이 좋은 날씨에요 🌤"
+            }
+            else if icon == "03d" || icon == "02n"{
+                des = "하늘에 구름이 많아요. \n오늘의 날씨를 살펴보세요 ☁️"
+            }
+            else if icon == "04d" || icon == "04n"{
+                des = "하늘에 구름이 많아요. \n오늘의 날씨를 살펴보세요 ☁️"
+            }
+            else if icon == "09d" || icon == "09n"{
+                des = "비가 오고 있어요. \n우산 꼭 챙기세요! ☔️"
+            }
+            else if icon == "10d" || icon == "10n"{
+                des = "비가 오고 있어요. \n우산 꼭 챙기세요! ☔️"
+            }
+            else if icon == "11d" || icon == "11n"{
+                des = "천둥 번개가 치고 있어요. \n외출 시 유의하세요 ⚡️"
+            }
+            else if icon == "13d" || icon == "13n"{
+                des = "눈이 내리고 있어요. 우산을 챙기는게 좋을 것 같아요. ☂️"
+            }
+            else if icon == "50d" || icon == "50n"{
+                des = "흐린 하늘이이에요. \n안개가 가득해요 🌫 "
+            }
         } catch {
             print("Error serializing Json: ", error)
         }
