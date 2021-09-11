@@ -1,6 +1,6 @@
 # styleweather
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/66946182/104257137-0fc5b000-54c0-11eb-8a0b-659de46fbd11.png" width = "30%">
+  <img src="https://user-images.githubusercontent.com/57933061/132938369-3f4d441f-889a-436e-9310-d87687eeaaba.png" width = "30%">
 </p>
 ✔ IOS 날씨 기반 옷 추천 앱
 
@@ -20,15 +20,15 @@
 
 - 인트로 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="200">
+    <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="300">
   </p>
 - 메인 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="200">
+    <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="300">
   </p>
 - 메인 화면 (스크롤)
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938296-ccca91d4-3b0e-42d2-9665-26c2488caf62.png" width="200">
+    <img src="https://user-images.githubusercontent.com/57933061/132938296-ccca91d4-3b0e-42d2-9665-26c2488caf62.png" width="300">
   </p>
 
 <br>
