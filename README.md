@@ -18,26 +18,19 @@
 
 ------
 
-- 메인 페이지
+- 인트로 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/128974152-0c849209-bade-42e0-88d2-fccdc90df768.JPG" width="800">
+    <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="800">
   </p>
-- 메인 페이지 (스크롤)
+- 메인 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/128974231-6d44a650-79f6-45ae-863c-e395fd267c20.JPG" width="800">
+    <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="800">
   </p>
-- 검색 페이지
+- 메인 화면 (스크롤)
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/128974277-bd8f0a17-7ee8-4917-9a6c-c54e26f917d4.JPG" width="800">
+    <img src="https://user-images.githubusercontent.com/57933061/132938296-ccca91d4-3b0e-42d2-9665-26c2488caf62.png" width="800">
   </p>
-- 로그인/회원가입 페이지
-  <p>
-    <img src="https://user-images.githubusercontent.com/57933061/128974314-4815276a-97b6-402e-952c-6b1b1bf0483b.JPG" width="800">
-  </p>
-- 마이 페이지
-  <p>
-    <img src="https://user-images.githubusercontent.com/57933061/128974379-e3dcab93-e273-4e0b-b15d-4354c26c3199.JPG" width="800">
-  </p>
+
 <br>
 
 
@@ -46,7 +39,7 @@
 
 ------
 
-2020.12 ~ 2021.02
+2021.08 ~ 2021.09
 
 
 
@@ -55,14 +48,12 @@
 
 ------
 
-- html / css 
-- javascript 
-- Visual Studio Code
-
+- swift
+- Xcode
 
 
 ### 😺 GitHub Repository
 
 ------
  
-https://github.com/CaffeMoa/cafemore
+https://github.com/minjuu/styleweather
