@@ -20,15 +20,15 @@
 
 - 인트로 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="300">
-  </p>
+    <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="200">
+  </p><br>
 - 메인 화면
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="300">
-  </p>
+    <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="200">
+  </p><br>
 - 메인 화면 (스크롤)
   <p>
-    <img src="https://user-images.githubusercontent.com/57933061/132938296-ccca91d4-3b0e-42d2-9665-26c2488caf62.png" width="300">
+    <img src="https://user-images.githubusercontent.com/57933061/132938296-ccca91d4-3b0e-42d2-9665-26c2488caf62.png" width="200">
   </p>
 
 <br>
