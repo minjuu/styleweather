@@ -22,6 +22,10 @@
   <p>
     <img src="https://user-images.githubusercontent.com/57933061/132938204-af2dc082-ea33-49dc-9415-e423ca1be12e.png" width="200">
   </p><br>
+- 위치 정보 허용 화면
+  <p>
+    <img src="https://user-images.githubusercontent.com/57933061/132947827-79f57b4d-d4a7-4126-9196-c4407a037a37.png" width="200">
+  </p><br>
 - 메인 화면
   <p>
     <img src="https://user-images.githubusercontent.com/57933061/132938252-e894237a-a8cf-430f-b413-0579e4e599ed.png" width="200">
