@@ -1,6 +1,6 @@
 # styleweather
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/57933061/132938369-3f4d441f-889a-436e-9310-d87687eeaaba.png" width = "10%">
+  <img src="https://user-images.githubusercontent.com/57933061/132938369-3f4d441f-889a-436e-9310-d87687eeaaba.png" width = "20%">
 </p>
 ✔ IOS 날씨 기반 옷 추천 앱
 
